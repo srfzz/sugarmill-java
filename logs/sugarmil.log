@@ -1,0 +1,60 @@
+2026-05-21T10:21:22.423+05:30  INFO 33204 --- [mill] [main] c.mill.sugarmill.SugarmillApplication    : Starting SugarmillApplication using Java 17.0.12 with PID 33204 (G:\resume\sugarmill\target\classes started by IMSRFZ in G:\resume\sugarmill)
+2026-05-21T10:21:22.425+05:30  INFO 33204 --- [mill] [main] c.mill.sugarmill.SugarmillApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-05-21T10:21:23.088+05:30  INFO 33204 --- [mill] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-21T10:21:23.103+05:30  INFO 33204 --- [mill] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JPA repository interfaces.
+2026-05-21T10:21:23.421+05:30  INFO 33204 --- [mill] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-21T10:21:23.430+05:30  INFO 33204 --- [mill] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-21T10:21:23.431+05:30  INFO 33204 --- [mill] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.54]
+2026-05-21T10:21:23.470+05:30  INFO 33204 --- [mill] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-21T10:21:23.471+05:30  INFO 33204 --- [mill] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1016 ms
+2026-05-21T10:21:23.669+05:30  INFO 33204 --- [mill] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-Sugarmill - Starting...
+2026-05-21T10:21:23.787+05:30  INFO 33204 --- [mill] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-Sugarmill - Added connection org.postgresql.jdbc.PgConnection@5e158f33
+2026-05-21T10:21:23.788+05:30  INFO 33204 --- [mill] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-Sugarmill - Start completed.
+2026-05-21T10:21:23.807+05:30  INFO 33204 --- [mill] [main] org.flywaydb.core.FlywayExecutor         : Database: jdbc:postgresql://localhost:5432/sugarmill_pdb (PostgreSQL 16.13)
+2026-05-21T10:21:23.852+05:30  INFO 33204 --- [mill] [main] o.f.core.internal.command.DbValidate     : Successfully validated 0 migrations (execution time 00:00.015s)
+2026-05-21T10:21:23.852+05:30  WARN 33204 --- [mill] [main] o.f.core.internal.command.DbValidate     : No migrations found. Are your locations set up correctly?
+2026-05-21T10:21:23.892+05:30  INFO 33204 --- [mill] [main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": << Empty Schema >>
+2026-05-21T10:21:23.898+05:30  INFO 33204 --- [mill] [main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
+2026-05-21T10:21:23.959+05:30  INFO 33204 --- [mill] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-21T10:21:24.011+05:30  INFO 33204 --- [mill] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.49.Final
+2026-05-21T10:21:24.037+05:30  INFO 33204 --- [mill] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-21T10:21:24.231+05:30  INFO 33204 --- [mill] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-21T10:21:24.277+05:30  WARN 33204 --- [mill] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-21T10:21:24.292+05:30  INFO 33204 --- [mill] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-Sugarmill)']
+	Database driver: undefined/unknown
+	Database version: 16.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-05-21T10:21:24.543+05:30  INFO 33204 --- [mill] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-05-21T10:21:24.546+05:30  INFO 33204 --- [mill] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-21T10:21:24.727+05:30  INFO 33204 --- [mill] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 3 endpoints beneath base path '/actuator'
+2026-05-21T10:21:24.747+05:30  WARN 33204 --- [mill] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: dfb05b1e-4dff-4564-9d38-9fdac2163f07
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-05-21T10:21:24.757+05:30  INFO 33204 --- [mill] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-05-21T10:21:25.113+05:30  INFO 33204 --- [mill] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-05-21T10:21:25.127+05:30  INFO 33204 --- [mill] [main] c.mill.sugarmill.SugarmillApplication    : Started SugarmillApplication in 3.113 seconds (process running for 3.584)
+2026-05-21T10:21:25.236+05:30  INFO 33204 --- [mill] [RMI TCP Connection(1)-172.27.224.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-21T10:21:25.236+05:30  INFO 33204 --- [mill] [RMI TCP Connection(1)-172.27.224.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-21T10:21:25.238+05:30  INFO 33204 --- [mill] [RMI TCP Connection(1)-172.27.224.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-21T10:21:38.867+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No mapping for GET /login
+2026-05-21T10:21:38.874+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-1] o.s.web.servlet.PageNotFound             : No endpoint GET /login.
+2026-05-21T10:21:38.944+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /favicon.ico
+2026-05-21T10:21:38.945+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-5] o.s.web.servlet.PageNotFound             : No endpoint GET /favicon.ico.
+2026-05-21T10:21:41.819+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2026-05-21T10:21:41.820+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-8] o.s.web.servlet.PageNotFound             : No endpoint GET /.
+2026-05-21T10:21:44.635+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2026-05-21T10:21:44.635+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-4] o.s.web.servlet.PageNotFound             : No endpoint GET /.
+2026-05-21T10:34:59.264+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No mapping for GET /
+2026-05-21T10:34:59.264+05:30  WARN 33204 --- [mill] [http-nio-8080-exec-6] o.s.web.servlet.PageNotFound             : No endpoint GET /.
+2026-05-21T10:35:50.315+05:30  INFO 33204 --- [mill] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2026-05-21T10:35:50.505+05:30  INFO 33204 --- [mill] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2026-05-21T10:35:50.509+05:30  INFO 33204 --- [mill] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-05-21T10:35:50.511+05:30  INFO 33204 --- [mill] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-Sugarmill - Shutdown initiated...
+2026-05-21T10:35:50.513+05:30  INFO 33204 --- [mill] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-Sugarmill - Shutdown completed.

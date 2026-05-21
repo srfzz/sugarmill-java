@@ -4,16 +4,17 @@ spring:
 
   datasource:
     url: jdbc:postgresql://localhost:5432/sugarmill_pdb
-    username: sugarmilluser
+    username: sugarmilldev
     password: 12345678
     driver-class-name: org.postgresql.Driver
     hikari:
       pool-name: HikariPool-Sugarmill
       maximum-pool-size: 10
-      minimum-idle: 10
+      minimum-idle: 4
       connection-timeout: 20000
       idle-timeout: 300000
       keepalive-time: 30000
+
 
   jpa:
     hibernate:
@@ -38,6 +39,20 @@ spring:
 
   mvc:
     throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+    # Redis (uncomment when you wire it up)
+    # data:
+    #   redis:
+    #     host: localhost
+    #     port: 6379
+    #     timeout: 2000ms
+    #     lettuce:
+    #       pool:
+    #         max-active: 8
+    #         max-idle: 4
+    #         min-idle: 1
 
 server:
   port: 8080
@@ -48,6 +63,8 @@ server:
     include-stacktrace: never
 
 logging:
+  file:
+    name: logs/sugarmill.log
   level:
     root: INFO
     com.gov.sugarmill: DEBUG
@@ -61,12 +78,15 @@ logging:
       file-name-pattern: "logs/sugarmill-%d{yyyy-MM-dd}.%i.log"
       max-file-size: 10MB
       max-history: 30
+      total-size-cap: 1GB
 
 management:
   endpoints:
     web:
       exposure:
-        include: health, info
+        include: health, info,loggers,logfile
   endpoint:
     health:
       show-details: when_authorized
+    logfile:
+      enabled: true

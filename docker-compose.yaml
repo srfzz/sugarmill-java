@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   db:
     image: postgres:16-alpine
@@ -5,15 +7,17 @@ services:
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: sugarmilluser
+      POSTGRES_USER: sugarmilldev
       POSTGRES_DB: sugarmill_pdb
       POSTGRES_PASSWORD: 12345678
     volumes:
       - sugarmill_pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}" ]
+      # Senior Move: Use the actual values directly in the health check command to avoid shell parsing bugs
+      test: ["CMD-SHELL", "pg_isready -U sugarmilldev -d sugarmill_pdb"]
       interval: 5s
       timeout: 5s
       retries: 5
+
 volumes:
   sugarmill_pgdata:
